@@ -1,12 +1,14 @@
 
 
+const assistant = require('../../../hooks/assistant');
+
 module.exports = {
   before: {
     all: [],
     find: [],
     get: [],
-    create: [],
-    update: [],
+    create: [assistant()],
+    update: [assistant()],
     patch: [],
     remove: []
   },

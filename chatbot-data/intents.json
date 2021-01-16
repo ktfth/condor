@@ -1,0 +1,73 @@
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["Oi", "Como vai você", "Tem alguém ai?", "Olá", "Bom dia"],
+         "responses": ["Olá, obrigado por perguntar", "Bom te ver novamente", "Oi, como posso ajudar?"],
+         "context": [""]
+        },
+        {"tag": "goodbye",
+         "patterns": ["Tchau", "Vejo você depois", "Adeus", "Bom conversar com você, tchau", "Te vejo mais tarde"],
+         "responses": ["Até logo!", "Tenha um ótimo dia", "Tchau! Volte sempre."],
+         "context": [""]
+        },
+        {"tag": "thanks",
+         "patterns": ["Obrigado", "Obrigado a você", "Isso ajudou bastante", "Incrivel, obrigado", "Obrigado por me ajudar"],
+         "responses": ["Feliz em ajudar!", "A qualquer momento!", "O prazer é meu"],
+         "context": [""]
+        },
+        {"tag": "noanswer",
+         "patterns": [],
+         "responses": ["Desculpe, não consegui entender você", "Por favor, me de mais informações", "Não tenho certeza se entendi"],
+         "context": [""]
+        },
+        {"tag": "options",
+         "patterns": ["Você pode me ajudar?", "O que você pode fazer?", "Quais tipos de ajuda você pode prover?", "Como você pode ser útil?", "Qual suporte você oferece"],
+         "responses": ["Eu posso guiar você através de Lista de reações adversas a medicamentos, rastreamento de pressão arterial, hospitais e farmácias "," Oferecendo suporte para reações adversas a medicamentos, pressão arterial, hospitais e farmácias"],
+         "context": [""]
+        },
+        {"tag": "adverse_drug",
+         "patterns": ["Como verificar reações adversas a medicamentos?", "Abrir módulo de medicamentos adversos", "Dê-me uma lista de medicamentos que causam comportamento adverso", "Liste todos os medicamentos adequados para pacientes com reação adversa", "Quais medicamentos não apresentam reação adversa?" ],
+         "responses": ["Navegando para o módulo de reação adversa a medicamentos"],
+         "context": [""]
+        },
+        {"tag": "blood_pressure",
+         "patterns": ["Abrir módulo de pressão arterial", "Tarefa relacionada à pressão arterial", "Entrada de dados de pressão arterial", "Desejo registrar os resultados de pressão arterial", "Gerenciamento de dados de pressão arterial" ],
+         "responses": ["Navegando para o módulo de pressão arterial"],
+         "context": [""]
+        },
+        {"tag": "blood_pressure_search",
+         "patterns": ["Desejo pesquisar o histórico de resultados da pressão arterial", "Pressão arterial do paciente", "Carregar resultado da pressão arterial do paciente", "Mostrar resultados da pressão arterial do paciente", "Encontrar resultados da pressão arterial por ID" ],
+         "responses": ["Forneça a ID do paciente", "ID do paciente?"],
+         "context": ["search_blood_pressure_by_patient_id"]
+        },
+        {"tag": "search_blood_pressure_by_patient_id",
+         "patterns": [],
+         "responses": ["Carregando resultado da pressão arterial para o paciente"],
+         "context": [""]
+        },
+        {"tag": "pharmacy_search",
+         "patterns": ["Encontre uma farmácia", "Encontre farmácia", "Lista de farmácias próximas", "Localize farmácia", "Procure farmácia" ],
+         "responses": ["Forneça o nome da farmácia"],
+         "context": ["search_pharmacy_by_name"]
+        },
+        {"tag": "search_pharmacy_by_name",
+         "patterns": [],
+         "responses": ["Carregando detalhes da farmácia"],
+         "context": [""]
+        },
+        {"tag": "hospital_search",
+         "patterns": ["Pesquisa de hospital", "Pesquisando hospital para transferir paciente", "Desejo pesquisar dados de hospitais", "Pesquisa de hospital para paciente", "Pesquisando detalhes de hospitais" ],
+         "responses": ["Forneça o nome ou localização do hospital"],
+         "context": ["search_hospital_by_params"]
+        },
+        {"tag": "search_hospital_by_params",
+         "patterns": [],
+         "responses": ["Forneça o tipo de hospital"],
+         "context": ["search_hospital_by_type"]
+        },
+        {"tag": "search_hospital_by_type",
+         "patterns": [],
+         "responses": ["Carregando detalhes do hospital"],
+         "context": [""]
+        }
+   ]
+}
